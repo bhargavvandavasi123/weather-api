@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 
 app.use(cors());
 
-mongoose.connect(process.env.MONGO_DB, { useNewUrlParser: true });
+mongoose.connect(process.env.ATABASE_URI, { useNewUrlParser: true });
 const db = mongoose.connection;
 db.on("error", (error) => console.log(error));
 db.once("open", () => console.log("connected to database"));
